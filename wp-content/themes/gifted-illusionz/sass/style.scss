@@ -1,0 +1,20 @@
+@import "globals";
+@import "amelia-styles";
+@import "variables";
+@import "mixins";
+@import "main";
+
+//pages
+@import "home/home";
+@import "header/header";
+@import "footer/footer";
+@import "pages/about";
+@import "pages/book-now";
+@import "pages/portfolio";
+@import "pages/blog";
+@import "pages/blog-single";
+@import "pages/testimonials";
+@import "pages/contact";
+
+//blocks
+@import "blocks/image-slideshow";

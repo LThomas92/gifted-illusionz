@@ -1,0 +1,189 @@
+//collection slideshow on Homepage
+.collections {
+  &__wrapper {
+	  margin: 0 2.5rem;
+
+	@include media(">=phone") {
+		padding-left: 1.5rem;
+		margin: 0;
+		margin-top: 3.5rem;
+	}
+
+	@include media(">=tablet") {
+		padding-left: 3rem;
+		margin-top: 6rem;
+	}
+
+	@include media(">=desktop-medium") {
+		padding-left: 5rem;
+		margin-top: 8rem;
+	}
+
+  }
+  &__item {
+    position: relative;
+
+	@include media(">=phone") {
+		display: grid !important;
+		grid-template-columns: 0.7fr 1fr;
+		grid-gap: 0.5rem;
+	}
+
+	@include media(">=tablet") {
+		grid-template-columns: 0.7fr 1.2fr;
+		grid-gap: 1rem;
+	}
+
+	@include media(">=desktop-medium") {
+		grid-template-columns: 0.5fr 1.4fr;
+		grid-gap: 2rem;
+	}
+	
+  }
+
+  &__title {
+    font-family: $crimson;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: 0.75px;
+    color: $white;
+    z-index: 4;
+	margin: 3rem 0;
+
+	@include media(">=phone") {
+		font-size: 3.5rem;
+		position: absolute;
+		top: 10%;
+		left: -25%;
+		margin-top: 0;
+	}
+
+	@include media(">=tablet") {
+		font-size: 5rem;
+	}
+
+	@include media(">=desktop-medium") {
+		font-size: 6.5rem;
+		line-height: 1.2;
+	}
+
+  }
+  &__image {
+	  max-width: 100%;
+	  max-height: 100%;
+
+    img {
+		display: block;
+		width: 100%;
+		object-fit: cover;
+		height: 35vh;
+		transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
+
+		@include media(">=phone") {
+			height: 40vh;
+		}
+	
+		@include media(">=tablet") {
+			height: 50vh;
+		}
+	
+		@include media(">=desktop-medium") {
+			height: 70vh;
+		}
+    }
+  }
+
+  &__cta-container {
+    display: block;
+  }
+
+  &__cta {
+	color: $white;
+	border: 3px solid $white;
+	display: inline-block;
+	padding: 1.2rem 1.6rem;
+	font-size: 1.2rem;
+	margin-top: 2.5rem;
+	text-align: center;
+
+	@include media(">=phone") {
+		margin-top: 12rem;
+		margin-left: 3.5rem;
+		font-size: 1.35rem;
+	}
+
+	@include media(">=tablet") {
+		padding: 1.5rem 1.6rem;
+		font-size: 1.5rem;
+		margin-top: 15rem;
+	}
+
+	@include media(">=desktop-medium") {
+		padding: 2rem 1.8rem;
+		font-size: 2rem;
+		margin-top: 20rem;
+	}
+
+      &:after {
+        content: '';
+        background-image: url('../img/arrow.svg');
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+        margin-left: 2.5rem;
+	
+		@include media(">=tablet") {
+			width: 1rem;
+			height: 1rem;
+		}
+
+		@include media(">=desktop-small") {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+
+      }
+      &:hover {
+        transition: all 300ms ease-in;
+        background-color: $orange;
+        color: $white;
+        border: 3px solid $orange;
+        &:after {
+          transform: scale(1.15);
+        }
+      }
+  }
+  &__content {
+    position: relative;
+  }
+}
+
+.slick-slider {
+  max-width: 100%;
+  width: 100%;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  li {
+    padding-right: 1.1rem;
+    button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background-color: rgba($lightGrey, 0.4);
+      cursor: pointer;
+      font-size: 0;
+	  cursor: pointer;
+    }
+  }
+  .slick-active {
+	  button {
+		background-color: $white;
+	  }
+  }
+}

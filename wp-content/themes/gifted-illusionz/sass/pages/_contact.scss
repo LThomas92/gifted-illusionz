@@ -1,0 +1,63 @@
+.contact-us {
+	&__title {
+		font-family: $workSans;
+		font-size: 5rem;
+		color: $white;
+		text-align: center;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0.5rem;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			background-color: $orange;
+			width: 35%;
+			height: 3.5rem;
+			display: block;
+			z-index: -1;
+		}
+	}
+	#gform_wrapper_1 {
+		max-width: 50%;
+		margin: 0 auto;
+		margin-top: 7rem;
+		margin-bottom: 5rem;
+		form {
+			label {
+				font-family: $workSans;
+				font-size: 1.2rem;
+				font-weight: 400 !important;
+				color: $white;
+			}
+		}
+		input[type="text"] {
+			border-radius: 3px;
+			border: none;
+			outline: none;
+		}
+
+		textarea {
+			border: none;
+			outline: none;
+			border-radius: 3px;
+		}
+		#gform_submit_button_1 {
+			padding: 1.2rem 1.4rem;
+			background-color: $white;
+			border: none;
+			outline: none;
+			font-size: 1.7rem;
+			font-family: $workSans;
+			color: $black;
+			cursor: pointer;
+			border-radius: 3px;
+			transition: all 300ms ease-in;
+				&:hover {
+					background-color: $orange;
+					color: $white;
+				}
+		}
+	}
+}
+

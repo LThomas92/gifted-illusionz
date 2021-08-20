@@ -1,0 +1,190 @@
+.am-service-providers {
+  display: none;
+}
+
+.am-service-info-column .el-row:nth-child(3) {
+  display: none;
+}
+
+.amelia-app-booking
+  #am-service-booking
+  .am-service
+  .am-service-header
+  .am-service-price {
+  border-radius: 0px !important;
+  background-color: white !important;
+}
+
+.am-service-data .am-service-info div:first-child {
+  display: none !important;
+}
+
+.amelia-app-booking #am-service-booking .am-service-gallery {
+  background-image: none !important;
+  background-color: $darkBlue;
+}
+
+.amelia-app-booking #am-service-booking .am-service {
+  background-color: $darkBlue;
+}
+
+.am-confirmation-booking-details div:first-child {
+  display: none !important;
+}
+
+.am-confirmation-booking-details div:nth-child(4) {
+  display: none !important;
+}
+
+.amelia-app-booking
+  #am-step-booking
+  .am-confirm-booking
+  .am-confirm-booking-form
+  .am-confirmation-booking-details,
+.amelia-app-booking
+  .am-step-booking-catalog
+  .am-confirm-booking
+  .am-confirm-booking-form
+  .am-confirmation-booking-details {
+  padding: 0px !important;
+  padding-top: 1rem !important;
+}
+
+.amelia-app-booking .el-button--primary.el-button,
+.am-modal.am-in-body .el-button--primary.el-button {
+  background-color: $darkBlue !important;
+  border: none !important;
+  border-radius: 0px;
+}
+
+.am-add-coupon {
+  display: none !important;
+}
+
+.amelia-app-booking #am-step-booking .am-select-date .am-calendar-picker div,
+.amelia-app-booking
+  .am-step-booking-catalog
+  .am-select-date
+  .am-calendar-picker
+  div {
+  color: $white !important;
+  font-weight: 700 !important;
+}
+
+.el-radio-button__inner {
+  color: $black !important;
+  font-weight: 600 !important;
+  background-color: $white !important;
+}
+
+.amelia-app-booking
+  #am-step-booking
+  .am-select-date
+  .am-button-wrapper
+  .el-button
+  span,
+.amelia-app-booking
+  .am-step-booking-catalog
+  .am-select-date
+  .am-button-wrapper
+  .el-button
+  span {
+  color: $darkBlue !important;
+}
+
+.am-service-info-column .el-row:nth-child(3) {
+  display: none !important;
+}
+
+.am-service-info .am-service-info-column:nth-child(2) {
+  display: none !important;
+}
+
+.am-category-services-thumbs {
+  display: none !important;
+}
+
+.am-category-service-color {
+  display: none !important;
+}
+
+#am-category .am-category-service .am-category-service-image {
+  height: 40vh !important;
+}
+
+.am-category-headline {
+	margin-bottom: 7.5rem !important;
+}
+
+.am-category-headline h3 {
+	font-family: $workSans !important;
+	font-size: 4.5rem !important;
+	font-weight: 500 !important;
+	line-height: 0.85 !important;
+	text-align: center !important;
+	color: $white !important;
+	display: block !important;
+	position: relative;
+	z-index: 4;
+	&::before {
+		content: '';
+		background-color: $orange;
+		width: 20%;
+		height: 2.2rem;
+		display: block;
+		position: absolute;
+		top: -12px;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		z-index: -1;
+		padding: 1rem 1.2rem;
+	}
+}
+
+.am-category-service-hover {
+	background-color: transparent !important;
+	span, button {
+		display: none !important;
+	}
+}
+
+.am-category-service {
+	transition: all 300ms ease-in;
+	border: none !important;
+	border-radius: 0 !important;
+}
+
+.am-category-service:hover {
+	box-shadow: none !important;
+	transform: scale(0.95);
+}
+
+.am-category-service-info {
+	text-align: center;
+}
+
+.am-service-info-column {
+	display: none !important;
+}
+
+.am-service-gallery {
+	display: none !important;
+}
+
+.am-service {
+	margin-top: 3rem !important;
+}
+
+.am-select-date-title {
+	margin-top: 1rem;
+}
+
+#am-step-booking-catalog0-calendar {
+	background: transparent !important;
+}
+
+.am-confirmation-booking-details {
+	div p {
+		padding: 0.5rem 0 !important;
+	}
+}

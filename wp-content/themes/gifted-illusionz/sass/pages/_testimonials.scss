@@ -1,0 +1,224 @@
+.testimonials {
+	margin-top: 4rem;
+	&__title {
+		position: relative;
+		z-index: 4;
+		color: $white;
+		font-family: $workSans;
+		font-size: 2.2rem;
+		font-weight: 500;
+		line-height: 1.2;
+		text-align: center;
+		margin-top: 3rem;
+		
+		@include media(">=phone") {
+			font-size: 2.5rem;
+			line-height: 1.8;
+		}
+	
+		@include media(">=tablet") {
+			font-size: 4.2rem;
+		}
+	
+		@include media(">=desktop-medium") {
+			font-size: 5.5rem;
+		}
+
+		&::before {
+			content: '';
+			background-color: $orange;
+			width: 50%;
+			height: 2rem;
+			position: absolute;
+			top: 0.2rem;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			z-index: -1;
+
+			@include media(">=phone") {
+				height: 2.5rem;
+			}
+		
+			@include media(">=tablet") {
+				height: 3rem;
+			}
+		
+			@include media(">=desktop-medium") {
+				top: 0;
+				height: 4rem;
+			}
+
+		}
+	}
+
+	&__arrows {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		transform: translate(-50%, 50%);
+		width: 95%;
+
+		@include media(">=phone") {
+
+		}
+
+		@include media(">=tablet") {
+
+		}
+
+		@include media(">=desktop-medium") {
+			top: 55%;
+			width: 80%;
+		}
+	}
+
+	&__arrow-left {
+		transform: scale(-1, 1);
+		cursor: pointer;
+		width: 2.5rem;
+		height: 2.5rem;
+
+		@include media(">=phone") {
+			width: 4.5rem;
+			height: 4.5rem;
+		}
+
+		@include media(">=desktop-medium") {
+			width: 5rem;
+			height: 5rem;
+		}
+	}
+
+	&__arrow-right {
+		cursor: pointer;
+		display: block;
+
+		width: 2.5rem;
+		height: 2.5rem;
+
+		@include media(">=phone") {
+			width: 4.5rem;
+			height: 4.5rem;
+		}
+
+		@include media(">=desktop-medium") {
+			width: 5rem;
+			height: 5rem;
+		}
+	}
+	&__single {
+		text-align: center;
+		position: relative;
+		&::before {
+			content: '';
+			background-image: url('../img/quote.svg');
+			background-size: 100% 100%;
+			position: absolute;
+			bottom: 13rem;
+			left: 2.25rem;
+			width: 35px;
+			height: 35px;
+			display: block;
+
+			@include media(">=phone") {
+				top: 0;
+				bottom: unset;
+				left: 10.25rem;
+				width: 70px;
+				height: 70px;
+			}
+		
+		}
+		&:after {
+			content: '';
+			background-image: url('../img/quote.svg');
+			transform: rotate(180deg);
+			background-size: 100% 100%;
+			position: absolute;
+			bottom: 0;
+			right: 2.25rem;
+			width: 35px;
+			height: 35px;
+			display: block;
+
+			@include media(">=phone") {
+				width: 70px;
+				height: 70px;
+				right: 10.25rem;
+			}
+		}
+	}
+	&__single-img {
+		img {
+			width: 350px;
+			height: 350px;
+			border-radius: 50%;
+			object-fit: cover;
+			display: block;
+			margin: auto;
+		}
+	}
+	&__single-name {
+		font-family: $workSans;
+		font-size: 3.5rem;
+		line-height: 1.6;
+		color: $white;
+		margin-top: 2.8rem;
+	}
+	&__single-content {
+		margin-top: 1.5rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+
+		@include media(">=phone") {
+			padding-left: 10rem;
+			padding-right: 10rem;
+		}
+	
+		@include media(">=tablet") {
+			padding-left: 15rem;
+			padding-right: 15rem;
+		}
+	
+		@include media(">=desktop-medium") {
+			margin-top: 4rem;
+			padding-left: 20rem;
+			padding-right: 20rem;
+		}
+
+		p {
+		font-family: $workSans;
+		font-size: 1.9rem;
+		line-height: 1.8;
+		color: $white;
+
+		@include media(">=desktop-medium") {
+			font-size: 2.2rem;
+		}
+
+		}
+
+	}
+
+	&__single-location {
+		font-family: $workSans;
+		font-size: 2rem;
+		line-height: 1.7;
+		color: $white
+	}
+
+}
+
+//star rating 
+.star-rating {
+	margin-top: 3rem;
+	.fa-star {
+		width: 5rem;
+		height: 5rem;
+		color: $orange;
+	}
+}

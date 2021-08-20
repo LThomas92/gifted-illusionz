@@ -1,0 +1,27 @@
+$bezier: cubic-bezier(0.64, 0.04, 0.35, 1);
+  .to-reveal {
+    opacity: 0;
+  }
+
+  .revealed {
+    transition: 0.6s $bezier;
+  }
+
+  //responsive media queries 
+
+  $breakpoints: (
+	'phone-xsmall': (320 / 16) * 1rem,
+	'phone-small': (425 / 16) * 1rem,
+	'phone-medium': (600 / 16) * 1rem,
+	'phone': (768 / 16) * 1rem,
+	'tablet-small': (900 / 16) * 1rem,
+	'tablet': (1024 / 16) * 1rem,
+	'desktop-small': (1200 / 16) * 1rem,
+	'desktop-medium': (1440 / 16) * 1rem,
+	'desktop-mlarge': (1600 / 16) * 1rem,
+	'desktop-large': (1800 / 16) * 1rem,
+	'desktop-xlarge': (1920 / 16) * 1rem,
+) !default;
+
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+

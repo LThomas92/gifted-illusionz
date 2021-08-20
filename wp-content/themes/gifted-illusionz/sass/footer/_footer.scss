@@ -1,0 +1,69 @@
+.site-footer {
+	margin-top: 6.5rem;
+	padding: 1.5rem 4rem;
+	.site-info {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 5.5rem;
+	}
+	&__social-media {
+		display: flex;
+		flex-direction: column;
+	}
+	&__instagram-icon {
+		width: 3rem;
+		height: 3rem;
+		margin-bottom: 2rem;
+		&:hover {
+			path {
+				transition: all 300ms ease-in;
+				fill: $yellow;
+			}
+		}
+	}
+
+	&__mail-icon {
+		width: 3rem;
+		height: 3rem;
+		&:hover {
+			path {
+				transition: all 300ms ease-in;
+				fill: $yellow;
+			}
+		}
+	}
+	&__links {
+		ul {
+			li {
+				a {
+					color: $white;
+					font-family: $workSans;
+					font-size: 1.4rem;
+					line-height: 1.2;
+					text-decoration: none;
+					display: block;
+					margin-bottom: 1.2rem;
+					&:hover {
+						transition: all 300ms ease-in;
+						color: $yellow;
+					}
+				}
+			}
+		}
+	}
+	&__stamp {
+		display: block;
+		color: $lightGrey;
+		font-family: $workSans;
+		font-size: 1.4rem;
+		line-height: 1.2;
+	}
+	&__lwc-stamp {
+		text-decoration: underline;
+		color: $lightGrey;
+		&:hover {
+			transition: all 300ms ease-in;
+			color: rgba($grey, 0.6);
+		}
+	}
+}

@@ -1,0 +1,108 @@
+.portfolio {
+	&__wrapper {
+		max-width: 100vw;
+		padding: 1.5rem 2.5rem;
+
+		@include media(">=phone") {
+			padding: 2.5rem 4.5rem;
+		}
+	
+		@include media(">=tablet") {
+			padding: 3.5rem 6rem;
+		}
+	
+		@include media(">=desktop-medium") {
+			padding: 5rem 8rem;
+		}
+	}
+	&__name-list {
+		margin-bottom: 4.5rem;
+		
+		@include media(">=phone") {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 7.5rem;
+		}
+	
+		@include media(">=tablet") {
+			
+		}
+	
+		@include media(">=desktop-medium") {
+			
+		}
+	}
+	&__name {
+		font-size: 1.8rem;
+		line-height: 0.6;
+		cursor: pointer;
+		background: linear-gradient($black, $black) bottom/0% 3px no-repeat;
+		transition: all 300ms ease-in;
+		position: relative;
+		padding: 10px 6px;
+		display: inline-block;
+
+		@include media(">=phone") {
+			font-size: 2rem;
+		}
+	
+		@include media(">=tablet") {
+			font-size: 2.2rem;
+		}
+	
+		@include media(">=desktop-medium") {
+			font-size: 2.8rem;
+			line-height: 0.6;
+		}
+	}
+
+	&__name-line {
+		background-size: 100% 2px;
+	}
+
+	&__grid {
+		display: block;
+		@include media(">=phone") {
+			display: grid;
+			gap: 1.5rem;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	
+		@include media(">=tablet") {
+			gap: 1.9rem;
+			grid-template-columns: 1fr 1fr 1fr 1fr;	
+		}
+	
+		@include media(">=desktop-medium") {
+			gap: 2.2rem;
+		}
+	
+	}
+	&__image {
+		max-width: 100%;
+		max-height: 100%;
+		opacity: 1;
+		transition: all 300ms ease-in;
+		display: block;
+		margin: 2.5rem 0;
+	
+		@include media(">=tablet") {
+			margin: 0;
+		}
+	
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			transition: all 300ms ease-in-out;
+		}
+	}
+}
+
+.hide-portfolio-img {
+	opacity: 0;
+  	height: 0;
+  	overflow: hidden;
+	transition: height 600ms ease 0ms;
+}
