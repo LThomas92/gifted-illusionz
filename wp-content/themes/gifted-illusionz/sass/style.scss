@@ -1,5 +1,4 @@
 @import "globals";
-@import "amelia-styles";
 @import "variables";
 @import "mixins";
 @import "main";
@@ -15,6 +14,11 @@
 @import "pages/blog-single";
 @import "pages/testimonials";
 @import "pages/contact";
+@import "pages/search";
+@import "pages/privacy-policy";
+@import "pages/404";
+@import "amelia-styles";
+
 
 //blocks
 @import "blocks/image-slideshow";

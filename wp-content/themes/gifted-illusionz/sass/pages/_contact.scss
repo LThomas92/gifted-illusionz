@@ -12,17 +12,33 @@
 			left: 50%;
 			transform: translate(-50%, 50%);
 			background-color: $orange;
-			width: 35%;
+			width: 80%;
 			height: 3.5rem;
 			display: block;
 			z-index: -1;
+
+		@include media(">=tablet") {
+			width: 55%;
+		}
+	
+		@include media(">=desktop-medium") {
+			width: 35%;
+		}
+		
 		}
 	}
 	#gform_wrapper_1 {
-		max-width: 50%;
+		max-width: 90%;
 		margin: 0 auto;
 		margin-top: 7rem;
-		margin-bottom: 5rem;
+
+		@include media(">=tablet") {
+			max-width: 80%;
+		}
+	
+		@include media(">=desktop-medium") {
+			max-width: 50%;
+		}
 		form {
 			label {
 				font-family: $workSans;

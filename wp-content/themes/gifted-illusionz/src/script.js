@@ -84,22 +84,20 @@ $(document).ready(function () {
   });
 
   $(".image-slideshow").slick({
-    dots: false,
-    arrows: true,
+    dots: true,
+    arrows: false,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: 1,
-    prevArrow: jQuery(".prev-arrow"),
-    nextArrow: jQuery(".next-arrow"),
   });
 
   $(".collections").slick({
     dots: true,
     arrows: false,
     infinite: true,
-    autoplay: false,
-    autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     // prevArrow: jQuery('.prev-arrow'),
     // nextArrow: jQuery('.next-arrow')
@@ -125,17 +123,21 @@ $(document).ready(function () {
 
 		$('.portfolio__grid picture').each(function() {
 			if(portfolioName !== $(this).attr('key')) {
-				$(this).addClass('hide-portfolio-img');
+				// $(this).addClass('hide-portfolio-img');
+				$(this).hide();
 			} else {
-				$(this).removeClass('hide-portfolio-img');
+				// $(this).removeClass('hide-portfolio-img');
+				$(this).show();
 			}
 		});
-	
 	});
+
+	$('.all-collections').addClass('portfolio__name-line');
 
 	$('.all-collections').click(function() {
 		$('.portfolio__grid picture').each(function() {
-			$(this).removeClass('hide-portfolio-img');
+			// $(this).removeClass('hide-portfolio-img');
+			$(this).show();
 		});
 	});
 
@@ -147,7 +149,7 @@ $(document).ready(function () {
 		$('.search-overlay').removeClass('search-overlay__active');
 	});
 
-	$('.menu-icon__checkbox').click(function() {
+	$('.menu-icon').click(function() {
 		$('.mobile-navigation').toggleClass('mobile-navigation__active');
 	});
 

@@ -1,4 +1,15 @@
 .book-now-container {
-	padding-left: 10rem;
-	padding-right: 10rem;
+	padding: 0 1.5rem;
+	
+	@include media(">=phone") {
+		padding: 0 2.5rem;
+	}
+
+	@include media(">=tablet") {
+		padding: 0 5rem;
+	}
+
+	@include media(">=desktop-medium") {
+		padding: 0 10rem;
+	}
 }

@@ -31,19 +31,15 @@ $collectionsLoop = new WP_Query( $args );  ?>
 <?php while ( $collectionsLoop->have_posts() ) : $collectionsLoop->the_post(); ?>
 				<div class="collections__item">
 				<div class="collections__cta-container">
-				<a class="collections__cta" href="<?php the_permalink(); ?>">View Collection</a>
+				<a class="collections__cta" href="<?php echo site_url() . '/portfolio'; ?>">View Collection</a>
 				</div> <!-- container -->
 				<div class="collections__content">
 				<h1 class="collections__title"><?php echo the_title(); ?></h1>
-				<picture class="collections__image">
-				<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail(); ?>
-				</a>
-
-				</picture>
+				<div style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');" 
+				class="collections__image"></div>
 			 </div>  <!-- collections content -->
 
-			</div> <!-- collection item -->
+	</div> <!-- collection item -->
       <?php endwhile; ?>
 
 </div> <!-- collections -->

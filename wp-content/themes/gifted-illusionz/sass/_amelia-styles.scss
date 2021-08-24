@@ -67,14 +67,18 @@
   .am-select-date
   .am-calendar-picker
   div {
-  color: $white !important;
-  font-weight: 700 !important;
+  color: $darkBlue !important;
+  font-weight: 600 !important;
 }
 
 .el-radio-button__inner {
-  color: $black !important;
+  color: $darkBlue !important;
   font-weight: 600 !important;
-  background-color: $white !important;
+  transition: all 300ms ease-in;
+  &:hover {
+	background-color: $darkBlue !important;
+	color: $white !important;
+  }
 }
 
 .amelia-app-booking
@@ -126,10 +130,11 @@
 	display: block !important;
 	position: relative;
 	z-index: 4;
+
 	&::before {
 		content: '';
 		background-color: $orange;
-		width: 20%;
+		width: 80%;
 		height: 2.2rem;
 		display: block;
 		position: absolute;
@@ -138,6 +143,18 @@
 		transform: translate(-50%, 50%);
 		z-index: -1;
 		padding: 1rem 1.2rem;
+
+		@include media(">=phone") {
+			width: 70%;
+		}
+
+		@include media(">=tablet") {
+			width: 60%;
+		}
+	
+		@include media(">=desktop-medium") {
+			width: 50%;
+		}
 	}
 }
 
@@ -187,4 +204,45 @@
 	div p {
 		padding: 0.5rem 0 !important;
 	}
+}
+
+.amelia-app-booking #am-service-booking p {
+	color: $darkBlue;
+}
+
+#am-continue-button {
+	transition: all 300ms ease-in;
+	&:hover {
+		background-color: $darkBlue !important;
+		span {
+			color: $white !important;
+	}
+	}
+}
+
+.am-service-header {
+	margin-bottom: 0 !important;
+	@include media(">=tablet") {
+		margin-bottom: 2.5rem;
+	}
+}
+
+.am-service-price {
+	display: none !important;
+	@include media(">=tablet") {
+		display: block;
+	}
+}
+
+#am-step-booking-catalog0 {
+	margin: 0 !important;
+	margin-bottom: 2rem !important;
+	max-width: 100% !important;
+	@include media(">=tablet") {
+		margin: 2.5rem 0;
+	}
+}
+
+.am-step-booking-catalog {
+	border-radius: 2px !important;
 }

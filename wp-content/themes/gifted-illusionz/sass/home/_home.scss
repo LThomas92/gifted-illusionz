@@ -70,28 +70,11 @@
 
   }
   &__image {
-	  max-width: 100%;
-	  max-height: 100%;
-
-    img {
-		display: block;
-		width: 100%;
-		object-fit: cover;
-		height: 35vh;
-		transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
-
-		@include media(">=phone") {
-			height: 40vh;
-		}
-	
-		@include media(">=tablet") {
-			height: 50vh;
-		}
-	
-		@include media(">=desktop-medium") {
-			height: 70vh;
-		}
-    }
+	  	width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
   }
 
   &__cta-container {
@@ -122,7 +105,7 @@
 	@include media(">=desktop-medium") {
 		padding: 2rem 1.8rem;
 		font-size: 2rem;
-		margin-top: 20rem;
+		margin-top: 24rem;
 	}
 
       &:after {

@@ -14,8 +14,8 @@
 <?php $testimonials = get_field('testimonials');
 if( $testimonials ): ?>
 	<div class="testimonials__arrows">
-		<img class="testimonials__arrow-left" src="<?php echo get_template_directory_uri(); ?>/img/testimonial-arrow.svg" alt="Testimonial Arrow Left">
-		<img class="testimonials__arrow-right" src="<?php echo get_template_directory_uri(); ?>/img/testimonial-arrow.svg" alt="Testimonial Arrow Right">
+		<img title="Previous Slide" class="testimonials__arrow-left" src="<?php echo get_template_directory_uri(); ?>/img/testimonial-arrow.svg" alt="Testimonial Arrow Left">
+		<img title="Next Slide" class="testimonials__arrow-right" src="<?php echo get_template_directory_uri(); ?>/img/testimonial-arrow.svg" alt="Testimonial Arrow Right">
 	</div>
     <ul class="testimonials">
     <?php foreach( $testimonials as $testimonial ): 

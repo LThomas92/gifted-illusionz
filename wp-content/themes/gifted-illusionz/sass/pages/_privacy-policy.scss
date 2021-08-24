@@ -1,0 +1,29 @@
+.wpautoterms_page-template-default {
+	.single-blog__meta {
+		display: none;
+	}
+	.single-blog {
+		h2 {
+			font-family: $workSans;
+			font-size: 2rem;
+			margin-bottom: 1.2rem;
+			color: $yellow;
+		}
+		ul {
+			display: flex;
+			justify-content: space-between;
+			li {
+				font-family: $workSans;
+				font-size: 1.2rem;
+				line-height: 0.9;
+				color: $white;
+				margin: 1.2rem 0;
+			}
+			margin-bottom: 1.2rem;
+		}
+	}
+}
+
+.wpautoterms-footer {
+	display: none;
+}

@@ -15,8 +15,25 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--  Essential META Tags -->
+	<meta property="og:title" content="Gifted Illusionz">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="" />
+	<meta property="og:image:secure_url" content="">
+	<meta property="og:type" content="image/jpg">
+	<meta property="og:image:width" content="300">
+	<meta property="og:image:height" content="300">
+	<meta property="og:url" content="https://giftedillusionz.com">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<!--  Non-Essential, But Recommended -->
+
+	<meta property="og:site_name" content="Gifted Illusionz">
+	<meta name="twitter:image:alt" content="">
+
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -27,6 +44,30 @@
 		}
 		.main-navigation li a {
 			color: #000;
+		}
+
+		.site-footer .site-footer__links ul li a {
+			color: #1f172e;
+		}
+
+		.site-footer__social-media a svg path {
+			fill: #1f172e;
+		}
+
+		.site-footer__stamp {
+			color: #1f172e;
+		}
+
+		.site-footer__lwc-stamp {
+			color: #1f172e;
+		}
+
+		.menu-icon span {
+			background-color: #1f172e;
+		}
+
+		.search-icon path  {
+			fill: #1f172e;
 		}
 	</style>
 <?php } ?>
@@ -40,7 +81,7 @@
 	<header id="masthead" class="site-header">
 
 		<nav id="site-navigation" class="main-navigation">
-			<a href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Gifted Illusionz Logo"/></a>
+			<a href="<?php echo site_url(); ?>"><img title="Gifted Illusionz Logo" class="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Gifted Illusionz Logo"/></a>
 			<?php
 			wp_nav_menu(
 				array(
@@ -50,15 +91,22 @@
 			);
 			?>
 
-	<div class="menu-icon">
-			<input class="menu-icon__checkbox" type="checkbox" />
-			<div>
+			<div title="Mobile Menu" class="menu-icon">
+				<span></span>
 				<span></span>
 				<span></span>
 			</div>
-	</div>
 
-				<img class="search-icon" src="<?php echo get_template_directory_uri(); ?>/img/search.svg" alt="Search Icon"/>
+			<svg title="Search" class="search-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 			viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+			<style type="text/css">
+				.st0{fill:#FFFFFF;}
+			</style>
+		<path class="st0" d="M23.8,20.9l-6.4-6.4c0.9-1.5,1.5-3.2,1.5-5.1c0-5.2-4.2-9.5-9.5-9.5S0,4.2,0,9.5c0,5.2,4.2,9.5,9.5,9.5
+			c1.8,0,3.4-0.5,4.8-1.3l6.4,6.4C20.7,24,23.8,20.9,23.8,20.9z M3.5,9.5c0-3.3,2.7-5.9,5.9-5.9c3.3,0,5.9,2.7,5.9,5.9
+			c0,3.3-2.7,5.9-5.9,5.9C6.2,15.4,3.5,12.7,3.5,9.5z"/>
+		</svg>
+
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 			<div class="search-overlay">

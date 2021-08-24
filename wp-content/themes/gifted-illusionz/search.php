@@ -10,12 +10,12 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main search-page-results">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
+			<header class="search-page-results__header">
+				<h1 class="search-page-results__title">
 					<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'gifted-illusionz' ), '<span>' . get_search_query() . '</span>' );
@@ -23,31 +23,41 @@ get_header();
 				</h1>
 			</header><!-- .page-header -->
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			<section class="search-page-results__container">
+			<?php while ( have_posts() ) :
+				the_post(); ?>
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+			<a href="<?php echo the_permalink(); ?>">
+				<article class="search-page-results__single">
+				<picture class="search-page-results__single-image">
+				<?php the_post_thumbnail(); ?>
+				</picture>
+				<h2 class="search-page-results__single-title"><?php the_title(); ?></h2>
+				<p class="search-page-results__single-desc"><?php get_the_excerpt(); ?></p>
+				</article>
+			</a>
 
-			endwhile;
+			<?php endwhile; ?>
 
-			the_posts_navigation();
+			<?php else : ?>
 
-		else :
+			<div class="no-search-results-container">
+				<h3>Sorry, there are no search results, try your search again</h3>
 
-			get_template_part( 'template-parts/content', 'none' );
+				<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<label>
+					<input style="line-height: 4rem" type="search" class="search-field" placeholder="Search for something..." value="<?php echo get_search_query(); ?>" name="s" />
+					<button type="submit" class="search-submit"></button>
+					</label>
+				</form>
+				
+			</div>
 
-		endif;
-		?>
+		<?php endif; ?>
+
+		</section>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
